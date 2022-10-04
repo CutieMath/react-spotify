@@ -12,8 +12,8 @@ const SongDetails = () => {
     useGetSongDetailsQuery({ songid });
   return (
     <div className="flex flex-col">
-      {/* <DetailsHeader artistId={artistId} songData={songData} /> */}
-      <div className="mb-10">
+      <DetailsHeader artistId="" songData={songData} />
+      <div className="mb-10 mt-5">
         <h2 className="text-3xl font-bold">Lyrics:</h2>
         <div className="mt-5">
           {songData?.sections[1].type === "LYRICS" ? (
@@ -23,7 +23,7 @@ const SongDetails = () => {
               </p>
             ))
           ) : (
-            <p className="text-gray-900 text-base">Ah ohhh No lyrics found x</p>
+            <p className="text-gray-800 text-base">Ah ohhh No lyrics found x</p>
           )}
         </div>
       </div>

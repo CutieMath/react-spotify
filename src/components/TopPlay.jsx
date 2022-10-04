@@ -20,19 +20,19 @@ const TopChartCard = ({
   handlePlayClick,
 }) => (
   <div className="w-full flex flex-row items-center hover:bg-[#c2b4da] py-2 p-4 rounded-lg cursor-pointer mb-2">
-    <h3 className="font-bold text-base mr-3">{i + 1}.</h3>
+    <h3 className="font-bold text-base mr-3 text-white">{i + 1}.</h3>
     <div className="flex-1 flex flex-row justify-between items-center">
       <img
         className="w-20 h-20 rounded-lg"
         src={song?.images?.coverart}
         alt={song?.title}
       />
-      <div className="flex-1 flex flex-col justify-center mx-3">
+      <div className="flex-1 flex flex-col justify-center mx-3 text-white">
         <Link to={`/songs/${song.key}`}>
           <p className="text-xl font-bold">{song?.title}</p>
         </Link>
         <Link to={`/artists/${song?.artists[0].adamid}`}>
-          <p className="text-base mt-1 text-gray-700">{song?.subtitle}</p>
+          <p className="text-base mt-1 text-gray-100">{song?.subtitle}</p>
         </Link>
       </div>
     </div>
@@ -72,9 +72,9 @@ const TopPlay = () => {
       {/* top charts */}
       <div className="w-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
-          <h2 className="font-bold text-2xl">Top Charts</h2>
+          <h2 className="font-bold text-2xl text-white">Top Charts</h2>
           <Link to="/top-charts">
-            <p className="text-gray-700 text-base cursor-pointer">See more</p>
+            <p className="text-gray-100 text-base cursor-pointer">See more</p>
           </Link>
         </div>
         <div className="mt-4 flex flex-col gap-1">
@@ -95,9 +95,9 @@ const TopPlay = () => {
       {/* top artists */}
       <div className="w-full flex flex-col mt-8">
         <div className="flex flex-row justify-between items-center">
-          <h2 className="font-bold text-2xl">Top Artists</h2>
+          <h2 className="font-bold text-2xl text-white">Top Artists</h2>
           <Link to="/top-artists">
-            <p className="text-gray-700 text-base cursor-pointer">See more</p>
+            <p className="text-gray-100 text-base cursor-pointer">See more</p>
           </Link>
         </div>
         <Swiper
