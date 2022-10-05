@@ -14,7 +14,7 @@ const SongDetails = () => {
   const { data: songData, isFetching: isFetchingSongDetials } =
     useGetSongDetailsQuery({ songid });
   const {
-    data: relatedSongs,
+    data,
     isFetching: isFetchingRelatedSongs,
     error,
   } = useGetSongRelatedQuery({ songid });
@@ -51,7 +51,7 @@ const SongDetails = () => {
       </div>
 
       <RelatedSongs
-        data={relatedSongs}
+        data={data}
         isPlaying={isPlaying}
         activeSong={activeSong}
         handlePauseClick={handlePauseClick}
